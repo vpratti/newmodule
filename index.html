@@ -57,7 +57,7 @@
                   <small>
                     <span><a href="{{item.dtoFrontQueue.Id}}/" target="_blank">{{item.dtoFrontQueue.Id}}</a></span> | 
                     <span><a href="">json</a></span> | 
-                    <span>{{item.dtoFrontQueue.content.attrs.initialpublishdate | date: 'short'}}</span>
+                    <span>{{item.dtoFrontQueue.content.timestamp.published | date: 'short'}}</span>
                   </small>  
                 </div>
               </li>
