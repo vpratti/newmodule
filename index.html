@@ -53,10 +53,13 @@
         </div>
         <div class="col-md-3">
           <h3>Asset Menu</h3>
-          <div class="well" ng-controller="ManageFrontsCtrl">
-          {{double}}
-            <ul>
-              <li ng-repeat="item in frontsContentQueue"></li>
+          <div class="well assetPane" ng-controller="ManageFrontsCtrl">
+            <ul class="">
+              <li ng-repeat="item in frontsContentQueue">
+                <!-- image path needs updating -->
+                <img class="thumbNail" src="{{item.dtoFontQueue.content.inetnal_photo.attrs}}" />
+                <span>{{item.dtoFrontQueue.content.headline}}</span>
+              </li>
             </ul>
           </div>
         </div>  

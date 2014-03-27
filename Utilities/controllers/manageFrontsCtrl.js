@@ -4,7 +4,6 @@ prestoApp
 
         $http({method: 'GET', url: '/Data/ContentQueueData.json'}).
 		    success(function(data) {
-		    	alert(data);
 		      $scope.frontsContentQueue = data;
 		    });
 		    
