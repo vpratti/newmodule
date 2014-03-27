@@ -24,7 +24,6 @@
           <div class="buttonRow">
             <button class="btn btn-primary">Save</button>
           </div>
-          {{2+2}}
           <h3>Front List</h3>
 
           <ul class="nav nav-tabs">
@@ -58,7 +57,14 @@
               <li ng-repeat="item in frontsContentQueue">
                 <!-- image path needs updating -->
                 <img class="thumbNail" src="{{item.dtoFontQueue.content.inetnal_photo.attrs}}" />
-                <span>{{item.dtoFrontQueue.content.headline}}</span>
+                <span class="strong">{{item.dtoFrontQueue.content.headline}}</span><br />
+                <div>
+                  <small>
+                    <span><a href="{{item.dtoFrontQueue.Id}}/" target="_blank">{{item.dtoFrontQueue.Id}}</a></span> | 
+                    <span><a href="">json</a></span> | 
+                    <span>{{item.dtoFrontQueue.content.attrs.initialpublishdate | date: 'short'}}</span>
+                  </small>  
+                </div>
               </li>
             </ul>
           </div>

@@ -1,4 +1,9 @@
 /* styles */
+.strong {
+	font-weight: bold;
+}
+
+
 .buttonRow {
 	text-align: center;
 	margin: 10px 0 25px;
