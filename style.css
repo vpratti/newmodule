@@ -1,3 +1,7 @@
 /* styles */
 
-.
+.frontsList li {
+	list-style: none;
+	border: dotted 2px #ccc;
+	height: 50px;
+}
