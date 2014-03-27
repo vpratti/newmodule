@@ -9,6 +9,7 @@
       <link href="style.css" rel="stylesheet" />
       <link href="utilities/presto-ui.css" rel="stylesheet" />
       <script src="scripts.js"></script>
+      
       <script src="utilities/presto-ui.js"></script>
       <script src="utilities/controllers/manageFrontsCtrl.js"></script>
     </head>
@@ -23,7 +24,7 @@
           <div class="buttonRow">
             <button class="btn btn-primary">Save</button>
           </div>
-          
+          {{2+2}}
           <h3>Front List</h3>
 
           <ul class="nav nav-tabs">
@@ -52,7 +53,8 @@
         </div>
         <div class="col-md-3">
           <h3>Asset Menu</h3>
-          <div class="well">
+          <div class="well" ng-controller="ManageFrontsCtrl">
+          {{double}}
             <ul>
               <li ng-repeat="item in frontsContentQueue"></li>
             </ul>
