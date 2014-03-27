@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="prestoApp">
+<html ng-app="prestoApp" ng-controller="ManageFrontsCtrl">
 
     <head>
       <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" data-semver="3.1.1" data-require="bootstrap-css@*" />
@@ -27,19 +27,21 @@
           </div>
           <h3>Front List</h3>
 
-          <ul class="nav nav-tabs">
-            <li class="active"><a data-toggle="tab">Home</a></li>
-          </ul>
-            <div class="tab-content">
-                <div class="tab-pane active" id="home">
-                    <ul class="frontsList" ng-controller="LayoutModuleContentCtrl">
-                        <li class="" ng-repeat="item in LMC">
-                            {{item.dtoLayoutModuleContent.content.headline}}
-                        </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
+          <div class="frontTabSets" ng-repeat="item in LM">
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab">{{item.dtoLayoutModule.DisplayName}}</a></li>
+            </ul>
+              <div class="tab-content">
+                  <div class="tab-pane active" id="home">
+                      <ul class="frontsList">
+                          <li class="" ng-repeat="item in LMC">
+                              {{item.dtoLayoutModuleContent.content.headline}}
+                          </li>
+                      </ul>
+                      <div class="clearfix"></div>
+                  </div>
+              </div>
+          </div>
 
 
 
@@ -47,7 +49,7 @@
         </div>
         <div class="col-md-3">
           <h3>Asset Menu</h3>
-          <div class="well assetPane" ng-controller="ManageFrontsCtrl">
+          <div class="well assetPane">
             <ul class="">
               <li ng-repeat="item in frontsContentQueue">
                 <!-- image path needs updating -->
