@@ -1,0 +1,50 @@
+<div class="assetPanelContainer">
+    <div class="assetsPanel">
+        <tabset class="nav nav-tabs" id="assetTabs">
+            <tab class="searchTab tab-pane active" id="searchTab" name="Search">
+                <tab-heading>
+                    <i class='icon-search'></i>
+                </tab-heading>
+                <div>
+                    <header>
+                        <form class="input-append searchBox" ng-submit="search(searchTerm)">
+                            <input class="" id="" type="text" placeholder="Keyword(s) / Content ID" ng-model="searchTerm" ui-keyup="{'enter':'search(searchTerm)'}">
+                            <button type="submit" class="btn"><i class="icon-search"></i></button>
+                        </form>
+                    </header>
+                    <div class="assetList">
+                        <div class="assetListDefaultText" ng-hide="isSendRequest || searchResults">
+                            <span ng-show="noSearchResults">
+                                <strong class="text-warning">Sorry. No results found for "{{noSearchTerm}}"</strong>
+                                    <hr/>
+                            </span>
+                            Enter keyword or content ID above to begin search.
+                        </div>
+                        <div ng-show="isSendRequest"><i class="p-icon-spinner spinner spinner-middle"></i></div>
+                        <div class="assetListContainer assetSearch" ng-show="searchResults" ng-hide="isSendRequest">
+                            <div class="assetItem" ng-repeat="asset in searchResults" data-draggable="true" data-draggable-model="asset" data-draggable-key="$index" data-draggable-options="draggable.options" data-draggable-drag-ended="onDragEnded">
+                                <div class="row-fluid">
+                                    <div class="span1 assetIcons">
+                                        <i ng-class="'icon-facetime-' + asset.assetType"></i>
+                                        <a href="" class="p-icon-export-2 hide hover pull-bottom" title="{{ options.addToLabel }}" ng-click="addToClicked($index)"></a>
+                                    </div>
+                                    <div class="span8 assetMetadata">
+                                        <span class="assetTitle">{{asset.caption}}</span>
+                                        <br />
+                                        <span class="assetTimestamp muted">{{asset.updateDate | date: 'short'}} </span>
+                                        <asset-bullet data-asset="asset"></asset-bullet>
+                                    </div>
+                                    <div class="span3 assetThumbnail">
+                                        <div>
+                                            <img ng-src="{{asset.thumbnail}}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </tab>
+        </tabset>
+    </div>
+</div>

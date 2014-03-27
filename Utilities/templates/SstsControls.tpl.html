@@ -1,0 +1,23 @@
+﻿<section>
+    <label>Classification</label>
+    <select class="span12" ui-select2="{allowClear: true,minimumResultsForSearch: 0}" data-placeholder="Choose a section" name="section-field" ng-model="sstsModel.section" ng-class="{error: !validate.canPublish() && !options.isValid}">
+        <option value=""></option>
+        <option ng-repeat="item in data.sections" value="{{item.name}}">{{item.name}}</option>
+    </select>
+    <span class="help-inline"  ng-hide="options.isValid">
+        <small class="danger">* Section is required </small>
+    </span>
+    <select class="span12" ui-select2="{allowClear: true,minimumResultsForSearch: 0}" data-placeholder="Choose a Sub-section" name="section-field" ng-model="sstsModel.subsection">
+        <option value=""></option>
+        <option ng-repeat="item in data.subsections" value="{{item.name}}">{{item.name}}</option>
+    </select>
+    <select class="span12" ui-select2="{allowClear: true,minimumResultsForSearch: 0}" data-placeholder="Choose a Topic" name="section-field" ng-model="sstsModel.topic">
+        <option value=""></option>
+        <option ng-repeat="item in data.topics" value="{{item.name}}">{{item.name}}</option>
+    </select>
+    <select class="span12" ui-select2="{allowClear: true,minimumResultsForSearch: 0}" data-placeholder="Choose a Sub-topic" name="section-field" ng-model="sstsModel.subtopic">
+        <option value=""></option>
+        <option ng-repeat="item in data.subtopics" value="{{item.name}}">{{item.name}}</option>
+    </select>
+        
+</section>

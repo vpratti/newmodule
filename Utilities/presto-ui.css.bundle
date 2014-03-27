@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bundle minify="true" runOnBuild="false" output="presto-ui.css">
+  <!--The order of the <file> elements determines the order of them when bundled.-->
+  <file>/presto-ui/css/AssetBullet.css</file>
+  <file>/presto-ui/css/AssetPanel.css</file>
+  <file>/presto-ui/css/Classification.css</file>
+  <file>/presto-ui/css/PublishControls.css</file>
+  <file>/presto-ui/css/SaveControls.css</file>
+  <file>/presto-ui/css/DragDrop.css</file>
+</bundle>

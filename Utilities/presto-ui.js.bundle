@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<bundle minify="true" runOnBuild="true" output="presto-ui.js">
+  <!--The order of the <file> elements determines the order of them when bundled.-->
+  <file>/presto-ui/root/prestoUiModule.js</file>
+  <file>/presto-ui/services/messageService.js</file>
+  <file>/presto-ui/services/sstsService.js</file>
+  <file>/presto-ui/directives/affix.js</file>
+  <file>/presto-ui/services/searchService.js</file>
+  <file>/presto-ui/directives/assetBullet.js</file>
+  <file>/presto-ui/directives/assetPanel.js</file>  
+  <file>/presto-ui/directives/dragDrop.js</file>
+  <file>/presto-ui/directives/fadeIn.js</file>
+  <file>/presto-ui/directives/focusNextOnClick.js</file>
+  <file>/presto-ui/directives/notificationBar.js</file>
+  <file>/presto-ui/directives/remainingCharacters.js</file>
+  <file>/presto-ui/directives/equalHeightColumns.js</file>
+  <file>/presto-ui/directives/sstsControls.js</file>
+  <file>/presto-ui/directives/selectOnClick.js</file>
+  <file>/presto-ui/directives/ui-keypress.js</file>
+  <file>/presto-ui/directives/mediaBullet.js</file>
+  <file>/presto-ui/directives/timer.js</file>
+  <file>/presto-ui/filters/compareTime.js</file>
+  <file>/presto-ui/filters/runtimeFilter.js</file>
+  <file>/presto-ui/directives/siteGroupSelector.js</file>
+  <file>/presto-ui/directives/assetInUseSignalR.js</file>
+</bundle>

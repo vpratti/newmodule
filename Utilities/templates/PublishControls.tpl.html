@@ -1,0 +1,38 @@
+<div class="publishControls content">
+    <div class="control-group btn-publish">
+        <button type="button" class="btn btn-success btn-large btn-block btn" ng-click="publish()" ng-disabled="!validate.canEnablePublishButton()">
+            Publish <i class="p-icon-spinner spinner" ng-show="isPublishing"></i>
+        </button>
+    </div>
+    <div class="control-group">
+        <small>
+            <strong>Published:</strong>
+            <span ng-hide="model.status == 'published'">Not Published</span>
+            <span class="capitalize" ng-show="model.status == 'published'">{{ model.publishedOn | date:'short'}}</span>
+        </small>
+    </div>
+    <div class="control-group">
+        <small>
+            <strong>Embargo:</strong>
+            <span ng-hide="model.embargo != null">Publish Immediately</span>
+            <span ng-show="model.embargo != null" ng-hide="state.isSavingDraft || state.isPublishing">{{ model.embargo | date:'MM/dd/yyyy @ h:mma'}}</span>
+            <button type="button" class="btn btn-micro btn-inverse" ng-click="toggleEditEmbargo()">edit</button>
+        </small>
+    </div>
+    <div class="control-group" ng-show="state.isEditingEmbargo" fade-in>
+        <div class="input-append">
+            <input type="datetime-local" class="text-small" ng-model="state.embargoInput">
+            <button type="button" title="Click to Cancel Embargo" class="btn" ng-click="cancelEmbargo()"><i class="icon-remove-sign"></i></button>
+        </div>
+    </div>
+    <div class="control-group" ng-show="model.status == 'published'">
+        <input type="checkbox" id="chkReturnQueue" name="chkReturnQueue" ng-checked="model.returnToContentQueue" ng-model="model.returnToContentQueue" />
+        <label for="chkReturnQueue" class="chk-small text-small"><span></span>Return to Content Queue</label>
+    </div>
+
+    <div class="clear">
+        <label for="notecq"><small>Note to Content Queue</small></label>
+        <textarea id="notecq" name="notecq" class="span12 text-small" rows="1" placeholder="click to add note" ng-model="model.notesToCq"></textarea>
+    </div>
+
+</div>

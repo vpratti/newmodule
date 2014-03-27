@@ -1,7 +1,27 @@
 /* styles */
+.buttonRow {
+	text-align: center;
+	margin: 10px 0 25px;
+}
+
+.frontsList {
+	padding: 0;
+	padding-left: 5px;
+}
 
 .frontsList li {
 	list-style: none;
 	border: dotted 2px #ccc;
 	height: 50px;
+	width: 24.5%;
+	float: left;
+	margin: 1px;
+}
+
+.tab-pane {
+	border: solid 1px #ddd;
+	border-width: 0 1px 1px;
+	margin-bottom: 50px;
+	border-radius: 0 4px 4px 4px;
+	padding: 10px;
 }

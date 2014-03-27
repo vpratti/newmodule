@@ -1,0 +1,21 @@
+﻿<div class="saveControls content">
+    <div class="messageContainer">
+        <div>
+            <div class="uppercase pull-right assetStatus">
+                <span  ng-show="model.status" ng-class="model.status">{{model.status}}</span>
+                <span ng-show="!model.status">DRAFT</span>
+            </div>
+            <div class="label-text pull-left">
+                <span ng-show="state.isSavingDraft || state.isPublishing"><i class="p-icon-spinner spinner"></i> <small><strong>Saving</strong></small></span>
+                <span class="uppercase text-small danger strong" ng-show="model.status =='' && !state.isSavingDraft">NOT SAVED</span>
+                <span class="savedOn" ng-show="model.updatedOn && !(state.isSavingDraft || state.isPublishing)"><small tooltip="{{model.updatedOn | date:'short'}}" tooltip-placement="bottom"><strong>Saved:</strong> {{model.updatedOn | timeago}}</small></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="btn-group">
+        <button type="button" title="Click to save Draft" id="savedraft" class="btn btn-primary" ng-click="saveDraft()" ng-disabled="!validate.canSaveDraft()">
+            Save
+        </button>
+    </div>
+</div>

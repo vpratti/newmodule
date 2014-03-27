@@ -1,0 +1,131 @@
+﻿/** Asset Panel **/
+
+.assetPanelContainer,
+#assetBar {
+    width: 304px;
+}
+
+.assetPanelContainer > div {
+    padding: 10px;
+}
+
+.assetPanelContainer .assetsPanel {
+    padding: 10px 0 0;
+}
+
+.assetPanelContainer .nav {
+    margin-bottom: 0;
+}
+
+#assetBar .tab-content {
+    border: solid 1px #ddd;
+    background-color: rgb(240,240,240);
+    border-width: 0 1px 1px;
+    min-height: 300px;
+    overflow: hidden;
+}
+
+#assetBar .tab-content header {
+    background: white;
+    border-bottom: 1px solid rgb(220,220,220);
+    margin: 0;
+    padding: 10px 10px 0;
+    min-height: 40px;
+}
+
+.assetListDefaultText {
+    padding: 10px;
+    font-size: 1.5em;
+    color: rgb(153,153,153);
+    line-height: 26px;
+    font-weight: bold;
+}
+
+.assetListContainer .assetItem:last-child {
+    margin-bottom: 100px;
+}
+
+.assetList-summary {
+    border-bottom: 1px solid rgb(220,220,220);
+    padding-bottom: .5em;
+    padding-right: 9px;
+}
+
+.assetList {
+    height: 380px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.assetList .assetItem {
+    padding: 15px 5px 9px 8px;
+    border: solid 1px #ccc;
+    border-width: 1px 0;
+    background: rgb(255,255,255);
+}
+
+.assetList .assetItem:hover {
+    background: rgb(245,245,245);
+}
+
+.assetList .assetItem .hide {
+    display: inline;
+    margin-right: .5em;
+    opacity: 0;
+    text-align: center;
+}
+
+.assetList .assetItem:hover .hide.hover {
+    display: inline;
+    opacity: 1;
+}
+
+.assetList .assetTitle {
+    font-weight: bold;
+}
+
+.assetList .assetTimestamp {
+    font-size: 11px;
+}
+
+.assetList .assetThumbnail {
+    padding: 3px;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+}
+
+.assetList .assetThumbnail > div {
+    position: relative;
+}
+
+.spinner-middle { /*override for size*/
+    margin-left: -12px;
+    margin-top: -12px;
+    font-size: 24px;
+}
+
+.largeList.assetList {
+    height: auto;
+    overflow: visible;
+}
+
+.largeList .assetItem {
+    padding-left: 15px;
+}
+
+.playlistIndex {
+    position: absolute;
+    background-color: #fff;
+    -ms-border-radius: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 4px rgba(0,0,0,.2);
+    padding: 2px 7px;
+    top: -15px;
+    left: -16px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.largeList .assetRunTime {
+    margin-left: 5px;
+}

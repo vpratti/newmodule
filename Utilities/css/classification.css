@@ -1,0 +1,13 @@
+﻿/** Classification **/
+.select2-search-choice.selection-row {
+    margin: 5px 5px 5px 5px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    float: none !important;
+}
+.select2-parent-choice {
+    font-weight: bold !important;
+}
+.select2-child-choice {
+    padding-left: 10px !important;
+}
