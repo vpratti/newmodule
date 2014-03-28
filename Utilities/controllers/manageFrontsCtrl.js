@@ -28,8 +28,7 @@ prestoApp
 					}
 		};
 
-
-        $http({method: 'GET', url: '/Data/FrontsQueue.json'}).
+		$http({method: 'GET', url: '/Data/FrontsQueue.json'}).
 		    success(function(data) {
 		      $scope.frontsContentQueue = data;
 		    });
@@ -44,3 +43,10 @@ prestoApp
      			$scope.LMC = data;
    			});
     }]);
+
+    prestoApp.filter('isempty', function() {
+			    return function(input, replaceText) {
+			        if(input) return input;
+			        return replaceText;
+			    }
+		});
