@@ -32,10 +32,13 @@
 }
 
 .assetPane {
+	position: fixed;
+}
+
+.assetPane .well {
 	max-height: 500px;
 	width: 300px;
 	overflow: auto;
-	position: fixed;
 }
 
 .assetPane ul {

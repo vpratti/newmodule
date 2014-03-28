@@ -48,29 +48,31 @@
 
         </div>
         <div class="col-md-3">
-          <h3>Asset Menu</h3>
-          <div class="well assetPane">
-          	<div class="assetList">
+          <div class="assetPane">
+            <h3>Asset Menu</h3>
+            <div class="well">
+            	<div class="assetList">
 
-			  <div class="assetListContainer assetSearch">
-				  <div class="assetItem" ng-repeat="item in frontsContentQueue" data-draggable="true" data-draggable-key="$index"
-				  	data-draggable-options="draggable.options" data-draggable-drag-ended="onDragEnded" draggable="true">
-					  <div class="row-fluid">
-					  	  <img class="thumbNail" ng-src="{{item.dtoFrontQueue.content.thumbnail | isempty: 'http://slowbuddy.com/wp-content/gallery/funny-baby-pictures/crying-baby-wallpaper.jpg'}}" />
-						  <span class="strong">{{item.dtoFrontQueue.content.headline}}</span><br />
-						  <div>
-							<small>
-							  <span><a href="{{item.dtoFrontQueue.Id}}/" target="_blank">{{item.dtoFrontQueue.Id}}</a></span> |
-							  <span><a href="">json</a></span> |
-							  <span>{{item.dtoFrontQueue.content.timestamp.published | date: 'short'}}</span>
-							</small>
+        			  <div class="assetListContainer assetSearch">
+        				  <div class="assetItem" ng-repeat="item in frontsContentQueue" data-draggable="true" data-draggable-key="$index"
+        				  	data-draggable-options="draggable.options" data-draggable-drag-ended="onDragEnded" draggable="true">
+        					  <div class="row-fluid">
+        					  	  <img class="thumbNail" ng-src="{{item.dtoFrontQueue.content.thumbnail | isempty: 'http://slowbuddy.com/wp-content/gallery/funny-baby-pictures/crying-baby-wallpaper.jpg'}}" />
+        						  <span class="strong">{{item.dtoFrontQueue.content.headline}}</span><br />
+        						  <div>
+          							<small>
+          							  <span><a href="{{item.dtoFrontQueue.Id}}/" target="_blank">{{item.dtoFrontQueue.Id}}</a></span> |
+          							  <span><a href="">json</a></span> |
+          							  <span>{{item.dtoFrontQueue.content.timestamp.published | date: 'short'}}</span>
+          							</small>
                 		  </div>
-					  </div>
-				  </div>
-			  </div>
+        					  </div>
+        				  </div>
+        			  </div>
+              </div>
            	</div>
 
-         </div>
+          </div>
         </div>
       </div>
 
