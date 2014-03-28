@@ -9,7 +9,7 @@
       <link href="style.css" rel="stylesheet" />
       <link href="utilities/presto-ui.css" rel="stylesheet" />
       <script src="scripts.js"></script>
-      
+
       <script src="utilities/presto-ui.js"></script>
       <script src="utilities/controllers/manageFrontsCtrl.js"></script>
     </head>
@@ -43,12 +43,12 @@
                 <li class=""></li>
                 <li class=""></li>
                 <li class=""></li>
-              </ul>   
+              </ul>
               <div class="clearfix"></div>
             </div>
           </div>
 
-           
+
         </div>
         <div class="col-md-3">
           <h3>Asset Menu</h3>
@@ -56,24 +56,24 @@
             <ul class="">
               <li ng-repeat="item in frontsContentQueue">
                 <!-- image path needs updating -->
-                <img class="thumbNail" src="{{item.dtoFontQueue.content.inetnal_photo.attrs}}" />
+                <img class="thumbNail" src="{{GetValueByKey}}" />
                 <span class="strong">{{item.dtoFrontQueue.content.headline}}</span><br />
                 <div>
                   <small>
-                    <span><a href="{{item.dtoFrontQueue.Id}}/" target="_blank">{{item.dtoFrontQueue.Id}}</a></span> | 
-                    <span><a href="">json</a></span> | 
+                    <span><a href="{{item.dtoFrontQueue.Id}}/" target="_blank">{{item.dtoFrontQueue.Id}}</a></span> |
+                    <span><a href="">json</a></span> |
                     <span>{{item.dtoFrontQueue.content.attrs.initialpublishdate | date: 'short'}}</span>
-                  </small>  
+                  </small>
                 </div>
               </li>
             </ul>
           </div>
-        </div>  
+        </div>
       </div>
-      
+
     </div>
 
-    
+
   </body>
 
 </html>

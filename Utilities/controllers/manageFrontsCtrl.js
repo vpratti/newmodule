@@ -6,5 +6,8 @@ prestoApp
 		    success(function(data) {
 		      $scope.frontsContentQueue = data;
 		    });
-		    
+
+		$scope.GetValueByKey = "http://icons.iconarchive.com/icons/wineass/ios7-redesign/128/Sample-icon.png";
+
+
     }]);

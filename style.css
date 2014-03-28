@@ -49,3 +49,8 @@
 	border-bottom: solid 1px #ddd;
 	list-style: none;
 }
+
+.thumbNail {
+	height:32px;
+	weight:32px;
+}
