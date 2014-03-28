@@ -50,7 +50,18 @@
 	list-style: none;
 }
 
+
+.assetList .assetThumbnail {
+	height:40px;
+	width:40px;
+}
 .thumbNail {
 	height:32px;
-	weight:32px;
+	width:32px;
+}
+
+
+.assetList .assetThumbnail > div {
+	height:32px;
+	width:32px;
 }

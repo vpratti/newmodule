@@ -50,21 +50,27 @@
         <div class="col-md-3">
           <h3>Asset Menu</h3>
           <div class="well assetPane">
-            <ul class="">
-              <li ng-repeat="item in frontsContentQueue">
-                <!-- image path needs updating -->
-                <img class="thumbNail" src="{{item.dtoFontQueue.content.inetnal_photo.attrs}}" />
-                <span class="strong">{{item.dtoFrontQueue.content.headline}}</span><br />
-                <div>
-                  <small>
-                    <span><a href="{{item.dtoFrontQueue.Id}}/" target="_blank">{{item.dtoFrontQueue.Id}}</a></span> |
-                    <span><a href="">json</a></span> |
-                    <span>{{item.dtoFrontQueue.content.timestamp.published | date: 'short'}}</span>
-                  </small>
-                </div>
-              </li>
-            </ul>
-          </div>
+          	<div class="assetList">
+
+			  <div class="assetListContainer assetSearch">
+				  <div class="assetItem" ng-repeat="item in frontsContentQueue" data-draggable="true" data-draggable-key="$index"
+				  	data-draggable-options="draggable.options" data-draggable-drag-ended="onDragEnded" draggable="true">
+					  <div class="row-fluid">
+					  	  <img class="thumbNail" ng-src="{{item.dtoFrontQueue.content.thumbnail}}" />
+						  <span class="strong">{{item.dtoFrontQueue.content.headline}}</span><br />
+						  <div>
+							<small>
+							  <span><a href="{{item.dtoFrontQueue.Id}}/" target="_blank">{{item.dtoFrontQueue.Id}}</a></span> |
+							  <span><a href="">json</a></span> |
+							  <span>{{item.dtoFrontQueue.content.timestamp.published | date: 'short'}}</span>
+							</small>
+                		  </div>
+					  </div>
+				  </div>
+			  </div>
+           	</div>
+
+         </div>
         </div>
       </div>
 
